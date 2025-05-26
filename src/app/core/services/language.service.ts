@@ -6,11 +6,11 @@ import { BehaviorSubject, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class LanguageService {
-  private currentLanguageSubject = new BehaviorSubject<string>('es');
+  private currentLanguageSubject = new BehaviorSubject<string>('en');
 
   constructor(private translate: TranslateService) {
     // Inicializar con el idioma guardado o el predeterminado
-    const savedLang = localStorage.getItem('preferredLanguage') || 'es';
+    const savedLang = localStorage.getItem('preferredLanguage') || 'en';
     this.setLanguage(savedLang);
   }
 
