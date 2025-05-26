@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+/* Importar fuentes y otros estilos globales */
+// En src/styles.scss
+// @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// @import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+/* Importar estilos globales */
+@import 'styles/global.scss';
+/* Variables globales de colores */
+:root {
+  --primary-color: #2196f3;
+  --secondary-color: #104477;
+  --primary-text: #868e96;
+  --heading-text: #343a40;
+  --light-bg: #f5f5f5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+

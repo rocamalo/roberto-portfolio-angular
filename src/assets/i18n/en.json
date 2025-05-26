@@ -1,0 +1,130 @@
+{
+  "SIDENAV": {
+    "NAME": "Roberto Carlos Martínez Loredo",
+    "TITLE": "Computer Systems Engineer",
+    "ABOUT": "About",
+    "EXPERIENCE": "Experience",
+    "PORTFOLIO": "Portfolio",
+    "SKILLS": "Skills",
+    "CONTACT": "Contact",
+    "DOWNLOAD_CV": "Download CV"
+  },
+  "ABOUT": {
+    "TITLE": "Roberto Carlos",
+    "SUBTITLE": "Frontend Angular developer with Fullstack Javascript experience",
+    "DESCRIPTION": "I am a web developer committed to developing quality software, specialized in Angular and JavaScript, with fullstack experience and always open to learning and adapting to new technologies."
+  },
+  "EXPERIENCE": {
+    "TITLE": "Experience",
+    "JOB1": {
+      "TITLE": "Software Engineer",
+      "COMPANY": "3Pillar",
+      "PERIOD": "June 2022 - Present",
+      "DESCRIPTION": "Participated in the development of a complex enterprise-level system for AKC, involving cross-functional teams and a microservices architecture. Responsible for designing and implementing both frontend and backend features, database queries, automation process, performed code reviews and documentation. <br><strong>Stack:</strong> Angular · Node.js/NestJS · Flask · Oracle · MongoDB · GitLab · Jenkins · NGINX · Jira"
+    },
+    "JOB2": {
+      "TITLE": "Fullstack Developer",
+      "COMPANY": "Aztlansoft",
+      "PERIOD": "January 2021 - June 2022",
+      "DESCRIPTION": "Web developer in front-end technologies with frameworks such as Angular and Svelte, creation and maintenance of mobile applications with Ionic framework. Back-end maintenance with Play Framework Java and Databases with MySQL and PostgreSQL. Collaborated with multiple clients and projects. <br><strong>Stack:</strong> Angular · Ionic · Svelte · Node.js/NestJS · Java · MySQL · MongoDB · NGINX · GitHub · Jira"
+    },
+    "JOB3": {
+      "TITLE": "Web Developer and IT Support",
+      "COMPANY": "Eseasa",
+      "PERIOD": "May 2018 - December 2020",
+      "DESCRIPTION": "Web developer, in charge of updating the company's web pages using technologies such as HTML, CSS and Javascript, SASS preprocessors, giving technical support to users and keeping control of the servers, their backups and the network. <br><strong>Stack:</strong> HTML · CSS · SASS · Javascript · Ionic· GitHub"
+    },
+    "JOB4": {
+      "TITLE": "Junior IT Support",
+      "COMPANY": "MN Del Golfo",
+      "PERIOD": "January 2017 - April 2018",
+      "DESCRIPTION": "Technical support assistant in charge of SQL server backups, creation of stored procedures, security and support to the company network, technical support to face-to-face and remote users, administration of Microsoft Dynamics Software and PHP internal tools. <br><strong>Stack:</strong> HTML · CSS · Javascript · MySQL · PHP"
+    }
+  },
+  "PORTFOLIO": {
+    "TITLE": "Portfolio",
+    "FILTERS": {
+      "ALL": "All",
+      "WEB": "Web Design",
+      "MOBILE": "Mobile Apps"
+    },
+     "PROJECT1": {
+      "TITLE": "AKC Title Application Portal",
+      "DESCRIPTION": "Angular Web Application design for the registration of dogs in the American Kennel Club, I developed multiple features alongside UX/UI, Frontend and Backend developers, this was one of many projects i worked while being assigned to the AKC team.",
+      "LINK": "American Kennel Club",
+      "TECHNOLOGIES": "Angular, NestJs, Python, Oracle, MongoDB, RabbitMQ"
+    },
+     "PROJECT2": {
+      "TITLE": "Language Learning App Beelinguapp",
+      "DESCRIPTION": "Developed multiple backend features for the Android/IOS Beelinguapp App using Play Framework and Java with MySQL, also contributed with the design of the main Beelinguapp website",
+      "LINK": "Beelinguapp",
+      "TECHNOLOGIES": "HTML, CSS, Javascript, Bootstrap, Play Framework Java, MySQL and Android Studio."
+    },
+    "PROJECT3": {
+      "TITLE": "Delivery App",
+      "DESCRIPTION": "Maintenance to the 3 delivery, restaurant and administrator apps, implementation and testing new features in apps using the Ionic Framework and Play Framework with Java for the back-end with connection to PostgreSQL for the administration of the databases.",
+      "LINK": "Agil Admin App",
+      "TECHNOLOGIES": "HTML, CSS, TypeScript, Bootstrap, Ionic, Play Framework Java, PostgreSQL and Android Studio."
+    },
+    "PROJECT4": {
+      "TITLE": "Product Searcher with Shopping Cart",
+      "DESCRIPTION": "Business website with a login system, a search engine for products consumed through an API and the possibility of adding items to a shopping cart and printing a quote for the end customer.",
+      "LINK": "GoCar Webapp",
+      "TECHNOLOGIES": "HTML, CSS, TypeScript, Svelte Framework and TailWind CSS."
+    },
+    "PROJECT5": {
+      "TITLE": "Landing Page",
+      "DESCRIPTION": "Customized business presentation landing page. For local business.",
+      "LINK": "Dinnova website",
+      "TECHNOLOGIES": "HTML, CSS, Bootstrap."
+    },
+    "PROJECT6": {
+      "TITLE": "Wikipedia Clone",
+      "DESCRIPTION": "Pure CSS and HTML webpage clone of the original Wikipedia page, using Grid layout and Flexbox, totally responsive for studying purposes.",
+      "LINK": "Wikipedia clone",
+      "TECHNOLOGIES": "HTML and CSS"
+    },
+    "PROJECT7": {
+      "TITLE": "Task Manager Web System",
+      "DESCRIPTION": "Master's project of a web system for students with ADHD, task manager, calendar, notifications and with login system.",
+      "LINK": "Task Manager System",
+      "TECHNOLOGIES": "HTML, CSS, JavaScript and Bootstrap."
+    }
+  },
+  "SKILLS": {
+    "TITLE": "Technologies"
+  },
+  "CONTACT": {
+    "TITLE": "CONTACT ME",
+    "FORM": {
+      "NAME": "Full Name",
+      "EMAIL": "Email Address",
+      "SUBJECT": "Subject",
+      "MESSAGE": "Message",
+      "SEND": "Send"
+    },
+    "INFO": {
+      "ADDRESS": {
+        "TITLE": "Address",
+        "CONTENT": "Mérida, Yucatán, México"
+      },
+      "PHONE": {
+        "TITLE": "Phone",
+        "CONTENT": "(+52) 833 303 5269"
+      },
+      "EMAIL": {
+        "TITLE": "Email",
+        "CONTENT": "roberto.martinez.loredo@gmail.com"
+      }
+    }
+  },
+  "MISCELLANEOUS": {
+    "CLOSE": "CLOSE",
+      "EMAIL": {
+      "TITLE": "Message sent to Roberto Carlos",
+      "TEXT": "¡Succesfully sent the message!",
+      "THANKS": "Thanks for contacting me. I will reply as soon as possible.",
+      "BACK": "Go back to Portfolio"
+    }
+  }
+}

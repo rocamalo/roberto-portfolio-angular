@@ -1,0 +1,17 @@
+#experience {
+  background: #f5f5f5;
+
+  .card {
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    h4 {
+      font-family: 'Roboto Condensed', sans-serif;
+      text-transform: none;
+      color: #555;
+    }
+  }
+}

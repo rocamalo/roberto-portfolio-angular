@@ -1,0 +1,43 @@
+#skills {
+  background-image: url('/assets/img/bg-stats.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  .skill-cover {
+    background-color: rgba(31, 31, 31, 0.68);
+
+    h3 {
+      font-family: "hind", sans-serif;
+      font-size: 35px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .skill-item {
+    padding: 20px 0;
+    margin-bottom: 30px;
+    background: rgba(144, 144, 144, 0.78);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    i {
+      color: #2196f3;
+    }
+
+    .logo-image {
+      max-width: 80px;
+      height: auto;
+    }
+
+    p {
+      color: #fff;
+      font-family: "hind", sans-serif;
+      font-weight: 300;
+      margin-top: 10px;
+    }
+  }
+}

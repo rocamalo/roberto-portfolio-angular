@@ -1,0 +1,91 @@
+<section class="resume-section p-3 p-lg-5 d-flex flex-column" id="portfolio">
+  <div class="row my-auto">
+    <div class="col-12">
+      <h2 class="text-center">{{ 'PORTFOLIO.TITLE' | translate }}</h2>
+      <div class="mb-5 heading-border"></div>
+    </div>
+    <div class="col-md-12">
+      <div class="port-head-cont">
+        <button class="btn btn-general btn-green"
+                [ngClass]="{'active': currentFilter === 'all'}"
+                (click)="filterProjects('all')">
+          {{ 'PORTFOLIO.FILTERS.ALL' | translate }}
+        </button>
+        <button class="btn btn-general btn-green"
+                [ngClass]="{'active': currentFilter === 'consulting'}"
+                (click)="filterProjects('consulting')">
+          {{ 'PORTFOLIO.FILTERS.WEB' | translate }}
+        </button>
+        <button class="btn btn-general btn-green"
+                [ngClass]="{'active': currentFilter === 'finance'}"
+                (click)="filterProjects('finance')">
+          {{ 'PORTFOLIO.FILTERS.MOBILE' | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row my-auto">
+    <div class="col-sm-4 portfolio-item" *ngFor="let project of filteredProjects">
+      <div class="portfolio-link" (click)="openProjectModal(project)">
+        <div class="caption-port">
+          <div class="caption-port-content">
+            <i class="fa fa-search-plus fa-3x"></i>
+          </div>
+        </div>
+        <h4>{{ project.title | translate }}</h4>
+        <img class="img-fluid" [src]="project.image" alt="{{ project.title | translate }}">
+      </div>
+    </div>
+  </div>
+
+<!-- Modal para detalles del proyecto - ESTRUCTURA MEJORADA -->
+<div class="portfolio-modal" *ngIf="selectedProject" [ngClass]="{'show': selectedProject}">
+  <!-- Mover el botón de cerrar fuera del modal-dialog -->
+  <div class="close-modal" (click)="closeModal()">
+    <div class="lr">
+      <div class="rl"></div>
+    </div>
+  </div>
+
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="container">
+        <div class="row">
+          <div class="modal-body">
+            <div class="title-bar">
+              <div class="col-md-12">
+                <h2 class="text-center">{{ selectedProject.title | translate }}</h2>
+                <div class="heading-border"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <img class="img-fluid img-centered" [src]="selectedProject.image" alt="{{ selectedProject.title | translate }}">
+              </div>
+              <div class="col-md-6">
+                <p>{{ selectedProject.description | translate }}</p>
+                <ul class="list-inline item-details">
+                  <li>Link:
+                    <strong>
+                      <a [href]="selectedProject.linkUrl" target="_blank">{{ selectedProject.link | translate }}</a>
+                    </strong>
+                  </li>
+                  <li>Technologies used:
+                    <strong>
+                      <p>{{ selectedProject.technologies | translate }}</p>
+                    </strong>
+                  </li>
+                </ul>
+                <button class="btn btn-general btn-white" type="button" (click)="closeModal()">
+                  <i class="fa fa-times"></i>  {{ 'MISCELLANEOUS.CLOSE' | translate }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>

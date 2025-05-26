@@ -1,0 +1,130 @@
+{
+  "SIDENAV": {
+    "NAME": "Roberto Carlos Martínez Loredo",
+    "TITLE": "Ingeniero en Sistemas Computacionales",
+    "ABOUT": "Sobre mí",
+    "EXPERIENCE": "Experiencia",
+    "PORTFOLIO": "Portafolio",
+    "SKILLS": "Habilidades",
+    "CONTACT": "Contacto",
+    "DOWNLOAD_CV": "Descargar CV"
+  },
+  "ABOUT": {
+    "TITLE": "Roberto Carlos",
+    "SUBTITLE": "Desarrollador Frontend Angular con experiencia Fullstack JavaScript",
+    "DESCRIPTION": "Soy un desarrollador web comprometido con el desarrollo de software de calidad, especializado en Angular y JavaScript, con experiencia fullstack y siempre abierto a aprender y adaptarme a nuevas tecnologías."
+  },
+  "EXPERIENCE": {
+    "TITLE": "Experiencia",
+      "JOB1": {
+      "TITLE": "Ingeniero de Software",
+      "COMPANY": "3Pillar",
+      "PERIOD": "Junio 2022 - Presente",
+      "DESCRIPTION": "Desarrollé funcionalidades frontend y backend en un sistema empresarial para AKC, usando arquitectura de microservicios. Participé en diseño, desarrollo, automatización de procesos clave, queries de base de datos, revisión de código y documentación técnica. <br><strong>Stack:</strong> Angular · Node.js/NestJS · Flask · Oracle · MongoDB · GitLab · Jenkins · NGINX · Jira"
+    },
+    "JOB2": {
+      "TITLE": "Desarrollador Web",
+      "COMPANY": "Aztlansoft",
+      "PERIOD": "Enero 2021 - Junio 2022",
+      "DESCRIPTION": "Desarrollador web en tecnologías front-end con frameworks como Angular y Svelte, creación y mantenimiento de aplicaciones móviles con framework Ionic. Mantenimiento de back-end con Play Framework Java y Bases de datos con MySQL y PostgreSQL en multiples proyectos. <br><strong>Stack:</strong> Angular · Ionic · Svelte · Node.js/NestJS · Java · MySQL · MongoDB · NGINX · GitHub · Jira"
+    },
+    "JOB3": {
+      "TITLE": "Desarrollador Web y Soporte TI",
+      "COMPANY": "Eseasa",
+      "PERIOD": "Mayo 2018 - Diciembre 2020",
+      "DESCRIPTION": "Desarrollador web, encargado de actualizar las páginas web de la empresa utilizando tecnologías como HTML, CSS y Javascript, preprocesadores SASS, dando soporte técnico a usuarios y manteniendo control de los servidores, sus respaldos y la red. <br><strong>Stack:</strong> HTML · CSS · SASS · Javascript · Ionic· GitHub"
+    },
+    "JOB4": {
+      "TITLE": "Soporte TI Junior",
+      "COMPANY": "MN Del Golfo",
+      "PERIOD": "Enero 2017 - Abril 2018",
+      "DESCRIPTION": "Asistente de soporte técnico encargado de respaldos de servidores SQL, creación de procedimientos almacenados, seguridad y soporte a la red, soporte técnico a usuarios presenciales y remotos, administración de Microsoft Dynamics Software y aplicaciones PHP. <br><strong>Stack:</strong> HTML · CSS · Javascript · MySQL · PHP"
+    }
+  },
+  "PORTFOLIO": {
+    "TITLE": "Portafolio",
+    "FILTERS": {
+      "ALL": "Todos",
+      "WEB": "Diseño Web",
+      "MOBILE": "Apps Móviles"
+    },
+    "PROJECT1": {
+      "TITLE": "Portal de Solicitud de Títulos AKC",
+      "DESCRIPTION": "Aplicación web en Angular diseñada para el registro de perros en el American Kennel Club. Desarrollé múltiples funcionalidades junto a diseñadores UX/UI, y programadores Frontend y Backend. Este fue uno de varios proyectos en los que trabajé mientras formaba parte del equipo de AKC.",
+      "LINK": "American Kennel Club",
+      "TECHNOLOGIES": "Angular, NestJs, Python, Oracle, MongoDB, RabbitMQ"
+    },
+    "PROJECT2": {
+      "TITLE": "App de Aprendizaje de Idiomas Beelinguapp",
+      "DESCRIPTION": "Desarrollé múltiples funcionalidades de backend para la app Beelinguapp de Android/iOS utilizando Play Framework y Java con MySQL. También contribuí al diseño del sitio web principal de Beelinguapp.",
+      "LINK": "Beelinguapp",
+      "TECHNOLOGIES": "HTML, CSS, Javascript, Bootstrap, Play Framework Java, MySQL y Android Studio."
+    },
+    "PROJECT3": {
+      "TITLE": "Delivery App",
+      "DESCRIPTION": "Mantenimiento a las 3 aplicaciones delivery, restaurante y administrador, implementación y pruebas de nuevas funcionalidades en aplicaciones utilizando el Framework Ionic y Play Framework con Java para el back-end con conexión a PostgreSQL para la administración de las bases de datos.",
+      "LINK": "Agil Admin App",
+      "TECHNOLOGIES": "HTML, CSS, TypeScript, Bootstrap, Ionic, Play Framework Java, PostgreSQL y Android Studio."
+    },
+    "PROJECT4": {
+      "TITLE": "Buscador de Productos con Carrito",
+      "DESCRIPTION": "Sitio web empresarial con sistema de login, un buscador de productos consumido a través de una API y la posibilidad de añadir artículos a un carrito de compras e imprimir un presupuesto para el cliente final.",
+      "LINK": "GoCar Webapp",
+      "TECHNOLOGIES": "HTML, CSS, TypeScript, Svelte Framework y TailWind CSS."
+    },
+    "PROJECT5": {
+      "TITLE": "Landing Page",
+      "DESCRIPTION": "Landing page de presentación empresarial personalizada. Para negocio local.",
+      "LINK": "Dinnova website",
+      "TECHNOLOGIES": "HTML, CSS, Bootstrap."
+    },
+    "PROJECT6": {
+      "TITLE": "Clon de Wikipedia",
+      "DESCRIPTION": "Página web clon de la página original de Wikipedia, utilizando diseño Grid y Flexbox, totalmente responsiva con fines de estudio.",
+      "LINK": "Wikipedia clone",
+      "TECHNOLOGIES": "HTML y CSS"
+    },
+    "PROJECT7": {
+      "TITLE": "Sistema Gestor de Tareas",
+      "DESCRIPTION": "Proyecto de maestría de un sistema web para estudiantes con TDAH, gestor de tareas, calendario, notificaciones y con sistema de login.",
+      "LINK": "Task Manager System",
+      "TECHNOLOGIES": "HTML, CSS, JavaScript y Bootstrap."
+    }
+  },
+  "SKILLS": {
+    "TITLE": "Tecnologías"
+  },
+  "CONTACT": {
+    "TITLE": "CONTÁCTAME",
+    "FORM": {
+      "NAME": "Nombre Completo",
+      "EMAIL": "Correo Electrónico",
+      "SUBJECT": "Asunto",
+      "MESSAGE": "Mensaje",
+      "SEND": "Enviar"
+    },
+    "INFO": {
+      "ADDRESS": {
+        "TITLE": "Dirección",
+        "CONTENT": "Mérida, Yucatán, México"
+      },
+      "PHONE": {
+        "TITLE": "Teléfono",
+        "CONTENT": "(+52) 833 303 5269"
+      },
+      "EMAIL": {
+        "TITLE": "Correo",
+        "CONTENT": "roberto.martinez.loredo@gmail.com"
+      }
+    }
+  },
+    "MISCELLANEOUS": {
+    "CLOSE": "CERRAR",
+    "EMAIL": {
+      "TITLE": "Mensaje Enviado a Roberto Carlos",
+      "TEXT": "¡Mensaje Enviado Exitosamente!",
+      "THANKS": "Gracias por contactarme. He recibido tu mensaje y te responderé lo antes posible.",
+      "BACK": "Volver al Portfolio"
+    }
+  }
+}

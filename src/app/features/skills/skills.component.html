@@ -1,0 +1,14 @@
+<section class="d-flex flex-column" id="skills">
+  <div class="p-lg-5 p-3 skill-cover">
+    <h3 class="text-center text-white">{{ 'SKILLS.TITLE' | translate }}</h3>
+    <div class="row text-center my-auto">
+      <div class="col-md-3 col-sm-6" *ngFor="let skill of skills">
+        <div class="skill-item">
+          <img *ngIf="skill.logo" class="logo-image" [src]="skill.logo" alt="{{ skill.name }}">
+          <i *ngIf="skill.iconClass" [class]="skill.iconClass"></i>
+          <p>{{ skill.name }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
