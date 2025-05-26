@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
   languages: ['es', 'en'],
-  defaultLanguage: 'es'
+  defaultLanguage: 'en'
 };
