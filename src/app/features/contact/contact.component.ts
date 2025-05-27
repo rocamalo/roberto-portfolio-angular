@@ -37,7 +37,7 @@ export class ContactComponent implements OnInit {
 
     if (this.contactForm.valid && !this.isSubmitting) {
       this.isSubmitting = true;
-      this.submitMessage = 'Enviando mensaje...';
+      this.submitMessage = 'CONTACT.MESSAGES.SENDING'; // ← Ahora usa traducción
 
       // Preparar los datos como HttpParams (form-urlencoded)
       const formData = new HttpParams()
@@ -52,12 +52,15 @@ export class ContactComponent implements OnInit {
         'Content-Type': 'application/x-www-form-urlencoded'
       };
 
-      // Enviar POST request a la raíz del sitio
-      this.http.post('/', formData.toString(), { headers })
+      // Enviar POST request esperando respuesta de texto (no JSON)
+      this.http.post('/', formData.toString(), {
+        headers,
+        responseType: 'text' // ← IMPORTANTE: Esto evita el error JSON
+      })
         .subscribe({
           next: (response) => {
-            console.log('Formulario enviado exitosamente', response);
-            this.submitMessage = '¡Mensaje enviado correctamente! Te contactaré pronto.';
+            console.log('Formulario enviado exitosamente');
+            this.submitMessage = 'CONTACT.MESSAGES.SUCCESS'; // ← Usa traducción
             this.contactForm.reset();
             this.formSubmitted = false;
             this.isSubmitting = false;
@@ -69,7 +72,7 @@ export class ContactComponent implements OnInit {
           },
           error: (error) => {
             console.error('Error al enviar formulario:', error);
-            this.submitMessage = 'Error al enviar el mensaje. Por favor, intenta de nuevo.';
+            this.submitMessage = 'CONTACT.MESSAGES.ERROR'; // ← Usa traducción
             this.isSubmitting = false;
 
             // Limpiar mensaje de error después de 5 segundos
@@ -80,6 +83,7 @@ export class ContactComponent implements OnInit {
         });
     } else {
       console.log('Formulario inválido');
+      this.submitMessage = 'CONTACT.MESSAGES.INVALID'; // ← Usa traducción
     }
   }
 }

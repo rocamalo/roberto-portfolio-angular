@@ -103,6 +103,19 @@
       "MESSAGE": "Message",
       "SEND": "Send"
     },
+    "MESSAGES": {
+      "SENDING": "Sending message...",
+      "SUCCESS": "Message sent successfully! I'll contact you soon.",
+      "ERROR": "Error sending message. Please try again or send an email directly.",
+      "INVALID": "Please fill out all fields correctly."
+    },
+      "VALIDATION": {
+      "NAME_REQUIRED": "Name is required",
+      "EMAIL_REQUIRED": "Email is required",
+      "EMAIL_INVALID": "Email must be valid",
+      "SUBJECT_REQUIRED": "Subject is required",
+      "MESSAGE_REQUIRED": "Message is required"
+    },
     "INFO": {
       "ADDRESS": {
         "TITLE": "Address",
@@ -119,12 +132,6 @@
     }
   },
   "MISCELLANEOUS": {
-    "CLOSE": "CLOSE",
-      "EMAIL": {
-      "TITLE": "Message sent to Roberto Carlos",
-      "TEXT": "¡Succesfully sent the message!",
-      "THANKS": "Thanks for contacting me. I will reply as soon as possible.",
-      "BACK": "Go back to Portfolio"
-    }
+    "CLOSE": "CLOSE"
   }
 }

@@ -8,9 +8,9 @@
 
       <!-- Mensaje de estado del envío -->
       <div *ngIf="submitMessage" class="alert"
-           [ngClass]="submitMessage.includes('Error') ? 'alert-danger' : 'alert-success'"
+           [ngClass]="submitMessage.includes('ERROR') || submitMessage.includes('INVALID') ? 'alert-danger' : 'alert-success'"
            style="margin-bottom: 20px;">
-        {{ submitMessage }}
+        {{ submitMessage | translate }}
       </div>
 
       <!-- Formulario Angular Reactivo -->
@@ -24,7 +24,7 @@
               class="form-control"
               [ngClass]="{'is-invalid': formSubmitted && contactForm.get('name')?.errors}">
             <div *ngIf="formSubmitted && contactForm.get('name')?.errors" class="invalid-feedback">
-              El nombre es requerido
+              {{ 'CONTACT.VALIDATION.NAME_REQUIRED' | translate }}
             </div>
           </div>
 
@@ -36,8 +36,8 @@
               class="form-control"
               [ngClass]="{'is-invalid': formSubmitted && contactForm.get('email')?.errors}">
             <div *ngIf="formSubmitted && contactForm.get('email')?.errors" class="invalid-feedback">
-              <span *ngIf="contactForm.get('email')?.errors?.['required']">El email es requerido</span>
-              <span *ngIf="contactForm.get('email')?.errors?.['email']">El email debe ser válido</span>
+              <span *ngIf="contactForm.get('email')?.errors?.['required']">{{ 'CONTACT.VALIDATION.EMAIL_REQUIRED' | translate }}</span>
+              <span *ngIf="contactForm.get('email')?.errors?.['email']">{{ 'CONTACT.VALIDATION.EMAIL_INVALID' | translate }}</span>
             </div>
           </div>
 
@@ -49,7 +49,7 @@
               class="form-control"
               [ngClass]="{'is-invalid': formSubmitted && contactForm.get('subject')?.errors}">
             <div *ngIf="formSubmitted && contactForm.get('subject')?.errors" class="invalid-feedback">
-              El asunto es requerido
+              {{ 'CONTACT.VALIDATION.SUBJECT_REQUIRED' | translate }}
             </div>
           </div>
 
@@ -61,7 +61,7 @@
               [ngClass]="{'is-invalid': formSubmitted && contactForm.get('message')?.errors}"
               rows="5"></textarea>
             <div *ngIf="formSubmitted && contactForm.get('message')?.errors" class="invalid-feedback">
-              El mensaje es requerido
+              {{ 'CONTACT.VALIDATION.MESSAGE_REQUIRED' | translate }}
             </div>
           </div>
 
@@ -69,7 +69,7 @@
             <button class="btn btn-general btn-white"
                     type="submit"
                     [disabled]="isSubmitting">
-              <span *ngIf="isSubmitting">Enviando...</span>
+              <span *ngIf="isSubmitting">{{ 'CONTACT.MESSAGES.SENDING' | translate }}</span>
               <span *ngIf="!isSubmitting">{{ 'CONTACT.FORM.SEND' | translate }}</span>
             </button>
           </div>

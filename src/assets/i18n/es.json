@@ -103,6 +103,19 @@
       "MESSAGE": "Mensaje",
       "SEND": "Enviar"
     },
+      "MESSAGES": {
+      "SENDING": "Enviando mensaje...",
+      "SUCCESS": "¡Mensaje enviado correctamente! Te contactaré pronto.",
+      "ERROR": "Error al enviar el mensaje. Por favor, intenta de nuevo o envía un email directamente.",
+      "INVALID": "Por favor completa todos los campos correctamente."
+    },
+      "VALIDATION": {
+      "NAME_REQUIRED": "El nombre es requerido",
+      "EMAIL_REQUIRED": "El email es requerido",
+      "EMAIL_INVALID": "El email debe ser válido",
+      "SUBJECT_REQUIRED": "El asunto es requerido",
+      "MESSAGE_REQUIRED": "El mensaje es requerido"
+    },
     "INFO": {
       "ADDRESS": {
         "TITLE": "Dirección",
@@ -119,12 +132,6 @@
     }
   },
     "MISCELLANEOUS": {
-    "CLOSE": "CERRAR",
-    "EMAIL": {
-      "TITLE": "Mensaje Enviado a Roberto Carlos",
-      "TEXT": "¡Mensaje Enviado Exitosamente!",
-      "THANKS": "Gracias por contactarme. He recibido tu mensaje y te responderé lo antes posible.",
-      "BACK": "Volver al Portfolio"
-    }
+    "CLOSE": "CERRAR"
   }
 }
