@@ -6,79 +6,67 @@
         <div class="heading-border-light"></div>
       </div>
 
-      <!-- Mensaje de estado del envío -->
-      <div *ngIf="submitMessage" class="alert"
-           [ngClass]="submitMessage.includes('Error') ? 'alert-danger' : 'alert-success'"
-           style="margin-bottom: 20px;">
-        {{ submitMessage }}
+      <!-- Mensaje de estado (solo para mostrar errores de validación) -->
+      <div *ngIf="validationMessage" class="alert alert-danger" style="margin-bottom: 20px;">
+        {{ validationMessage }}
       </div>
 
-      <!-- Formulario Angular -->
-      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <!-- Formulario HTML nativo para Netlify -->
+      <form name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            action="/success.html"
+            (submit)="onSubmit($event)">
+
+        <!-- Campo honeypot para detectar bots -->
+        <p style="display: none;">
+          <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+        </p>
 
         <div class="row con-form">
-          <!-- Campo honeypot (oculto para detectar bots) -->
-          <input type="hidden" name="bot-field">
-
           <div class="col-md-12">
             <input
               type="text"
-              formControlName="fullName"
+              name="fullName"
+              #fullName
               [placeholder]="'CONTACT.FORM.NAME' | translate"
               class="form-control"
-              [ngClass]="{'is-invalid': formSubmitted && contactForm.get('fullName')?.errors}">
-            <div *ngIf="formSubmitted && contactForm.get('fullName')?.errors" class="invalid-feedback">
-              El nombre es requerido
-            </div>
+              required>
           </div>
 
           <div class="col-md-12">
             <input
               type="email"
-              formControlName="email"
+              name="email"
+              #email
               [placeholder]="'CONTACT.FORM.EMAIL' | translate"
               class="form-control"
-              [ngClass]="{'is-invalid': formSubmitted && contactForm.get('email')?.errors}">
-            <div *ngIf="formSubmitted && contactForm.get('email')?.errors" class="invalid-feedback">
-              <span *ngIf="contactForm.get('email')?.errors?.['required']">El email es requerido</span>
-              <span *ngIf="contactForm.get('email')?.errors?.['email']">El email debe ser válido</span>
-            </div>
+              required>
           </div>
 
           <div class="col-md-12">
             <input
               type="text"
-              formControlName="subject"
+              name="subject"
+              #subject
               [placeholder]="'CONTACT.FORM.SUBJECT' | translate"
               class="form-control"
-              [ngClass]="{'is-invalid': formSubmitted && contactForm.get('subject')?.errors}">
-            <div *ngIf="formSubmitted && contactForm.get('subject')?.errors" class="invalid-feedback">
-              El asunto es requerido
-            </div>
+              required>
           </div>
 
           <div class="col-md-12">
             <textarea
-              formControlName="message"
+              name="message"
+              #message
               [placeholder]="'CONTACT.FORM.MESSAGE' | translate"
               class="form-control"
-              [ngClass]="{'is-invalid': formSubmitted && contactForm.get('message')?.errors}"></textarea>
-            <div *ngIf="formSubmitted && contactForm.get('message')?.errors" class="invalid-feedback">
-              El mensaje es requerido
-            </div>
-          </div>
-
-          <!-- reCAPTCHA de Netlify -->
-          <div class="col-md-12 my-3">
-            <div data-netlify-recaptcha="true"></div>
+              required></textarea>
           </div>
 
           <div class="col-md-12 sub-but">
-            <button class="btn btn-general btn-white"
-                    type="submit"
-                    [disabled]="isSubmitting">
-              <span *ngIf="isSubmitting">Enviando...</span>
-              <span *ngIf="!isSubmitting">{{ 'CONTACT.FORM.SEND' | translate }}</span>
+            <button class="btn btn-general btn-white" type="submit">
+              {{ 'CONTACT.FORM.SEND' | translate }}
             </button>
           </div>
         </div>

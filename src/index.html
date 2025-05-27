@@ -14,14 +14,13 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 </head>
 <body id="page-top">
-    <!-- Netlify form fallback -->
-<form name="contact" netlify data-netlify-recaptcha="true" hidden>
-  <input type="text" name="fullName" />
-  <input type="email" name="email" />
-  <input type="text" name="subject" />
-  <textarea name="message"></textarea>
-  <div data-netlify-recaptcha="true"></div>
-</form>
+ <!-- Formulario oculto para detección de Netlify -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="fullName" />
+    <input type="email" name="email" />
+    <input type="text" name="subject" />
+    <textarea name="message"></textarea>
+  </form>
   <app-root></app-root>
 </body>
 </html>
