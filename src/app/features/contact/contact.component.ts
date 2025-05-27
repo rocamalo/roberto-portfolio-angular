@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -6,35 +7,24 @@ import { Component } from '@angular/core';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent {
-  validationMessage = '';
+export class ContactComponent implements OnInit {
+  showSuccessMessage = false;
 
-  onSubmit(event: Event): void {
-    const form = event.target as HTMLFormElement;
-    const formData = new FormData(form);
+  constructor(private route: ActivatedRoute) {}
 
-    // Validación básica
-    const fullName = formData.get('fullName') as string;
-    const email = formData.get('email') as string;
-    const subject = formData.get('subject') as string;
-    const message = formData.get('message') as string;
+  ngOnInit(): void {
+    // Verificar si hay parámetro de éxito en la URL
+    this.route.queryParams.subscribe(params => {
+      if (params['success'] === 'true') {
+        this.showSuccessMessage = true;
 
-    if (!fullName || !email || !subject || !message) {
-      event.preventDefault();
-      this.validationMessage = 'Por favor completa todos los campos.';
-      return;
-    }
-
-    // Validar email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      event.preventDefault();
-      this.validationMessage = 'Por favor ingresa un email válido.';
-      return;
-    }
-
-    // Si llega aquí, el formulario es válido y se enviará
-    this.validationMessage = '';
-    console.log('Formulario enviado correctamente');
+        // Ocultar mensaje después de 5 segundos
+        setTimeout(() => {
+          this.showSuccessMessage = false;
+          // Limpiar URL
+          window.history.replaceState({}, document.title, window.location.pathname);
+        }, 5000);
+      }
+    });
   }
 }

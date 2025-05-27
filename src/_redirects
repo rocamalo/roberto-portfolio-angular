@@ -1,3 +1,1 @@
-# Redirigir todas las rutas de Angular al index.html (excepto assets)
-/assets/*  /assets/:splat  200
-/*         /index.html     200
+/*    /index.html   200

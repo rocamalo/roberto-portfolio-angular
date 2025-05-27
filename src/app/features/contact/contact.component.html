@@ -6,22 +6,68 @@
         <div class="heading-border-light"></div>
       </div>
 
-      <!-- Mensaje de estado (solo para mostrar errores de validación) -->
-      <div *ngIf="validationMessage" class="alert alert-danger" style="margin-bottom: 20px;">
-        {{ validationMessage }}
+      <!-- Formulario que SÍ funciona con Netlify -->
+      <div class="contact-form">
+        <form
+          name="portfolio-contact"
+          method="POST"
+          data-netlify="true"
+          action="/?success=true"
+          netlify>
+
+          <input type="hidden" name="form-name" value="portfolio-contact">
+
+          <div class="row con-form">
+            <div class="col-md-12">
+              <input
+                type="text"
+                name="name"
+                placeholder="Nombre completo"
+                class="form-control"
+                required>
+            </div>
+
+            <div class="col-md-12">
+              <input
+                type="email"
+                name="email"
+                placeholder="Correo electrónico"
+                class="form-control"
+                required>
+            </div>
+
+            <div class="col-md-12">
+              <input
+                type="text"
+                name="subject"
+                placeholder="Asunto"
+                class="form-control"
+                required>
+            </div>
+
+            <div class="col-md-12">
+              <textarea
+                name="message"
+                placeholder="Mensaje"
+                class="form-control"
+                rows="5"
+                required></textarea>
+            </div>
+
+            <div class="col-md-12 sub-but">
+              <button class="btn btn-general btn-white" type="submit">
+                Enviar mensaje
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <!-- Mensaje de éxito (se muestra si hay ?success=true en la URL) -->
+        <div *ngIf="showSuccessMessage" class="alert alert-success mt-3">
+          <h4>¡Mensaje enviado correctamente!</h4>
+          <p>Gracias por contactarme. Te responderé lo antes posible.</p>
+        </div>
       </div>
-
-      <!-- Reemplaza todo el formulario por esto temporalmente -->
-<form name="contact-simple" method="POST" data-netlify="true">
-  <input type="hidden" name="form-name" value="contact-simple" />
-
-  <input type="text" name="name" placeholder="Tu nombre" required><br><br>
-  <input type="email" name="email" placeholder="Tu email" required><br><br>
-  <input type="text" name="subject" placeholder="Asunto" required><br><br>
-  <textarea name="message" placeholder="Tu mensaje" required></textarea><br><br>
-
-  <button type="submit">Enviar mensaje</button>
-</form>
     </div>
 
     <!-- Información de contacto -->

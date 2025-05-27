@@ -31,8 +31,9 @@
               "src/_redirects",
               "src/success.html",
               {
-                "glob": "**/*",
-                "input": "public"
+                "glob": "netlify.toml",
+                "input": ".",
+                "output": "."
               }
             ],
             "styles": [
