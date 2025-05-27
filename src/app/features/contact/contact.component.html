@@ -6,50 +6,71 @@
         <div class="heading-border-light"></div>
       </div>
 
-      <!-- Usar exactamente la misma estructura que funciona -->
-      <form name="portfolio-contact" method="POST" data-netlify="true" action="/assets/contact.html">
-        <input type="hidden" name="form-name" value="portfolio-contact">
+      <!-- Mensaje de estado del envío -->
+      <div *ngIf="submitMessage" class="alert"
+           [ngClass]="submitMessage.includes('Error') ? 'alert-danger' : 'alert-success'"
+           style="margin-bottom: 20px;">
+        {{ submitMessage }}
+      </div>
 
+      <!-- Formulario Angular Reactivo -->
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
         <div class="row con-form">
           <div class="col-md-12">
             <input
               type="text"
-              name="name"
-              placeholder="Nombre completo"
+              formControlName="name"
+              [placeholder]="'CONTACT.FORM.NAME' | translate"
               class="form-control"
-              required>
+              [ngClass]="{'is-invalid': formSubmitted && contactForm.get('name')?.errors}">
+            <div *ngIf="formSubmitted && contactForm.get('name')?.errors" class="invalid-feedback">
+              El nombre es requerido
+            </div>
           </div>
 
           <div class="col-md-12">
             <input
               type="email"
-              name="email"
-              placeholder="Correo electrónico"
+              formControlName="email"
+              [placeholder]="'CONTACT.FORM.EMAIL' | translate"
               class="form-control"
-              required>
+              [ngClass]="{'is-invalid': formSubmitted && contactForm.get('email')?.errors}">
+            <div *ngIf="formSubmitted && contactForm.get('email')?.errors" class="invalid-feedback">
+              <span *ngIf="contactForm.get('email')?.errors?.['required']">El email es requerido</span>
+              <span *ngIf="contactForm.get('email')?.errors?.['email']">El email debe ser válido</span>
+            </div>
           </div>
 
           <div class="col-md-12">
             <input
               type="text"
-              name="subject"
-              placeholder="Asunto"
+              formControlName="subject"
+              [placeholder]="'CONTACT.FORM.SUBJECT' | translate"
               class="form-control"
-              required>
+              [ngClass]="{'is-invalid': formSubmitted && contactForm.get('subject')?.errors}">
+            <div *ngIf="formSubmitted && contactForm.get('subject')?.errors" class="invalid-feedback">
+              El asunto es requerido
+            </div>
           </div>
 
           <div class="col-md-12">
             <textarea
-              name="message"
-              placeholder="Mensaje"
+              formControlName="message"
+              [placeholder]="'CONTACT.FORM.MESSAGE' | translate"
               class="form-control"
-              rows="5"
-              required></textarea>
+              [ngClass]="{'is-invalid': formSubmitted && contactForm.get('message')?.errors}"
+              rows="5"></textarea>
+            <div *ngIf="formSubmitted && contactForm.get('message')?.errors" class="invalid-feedback">
+              El mensaje es requerido
+            </div>
           </div>
 
           <div class="col-md-12 sub-but">
-            <button class="btn btn-general btn-white" type="submit">
-              {{ 'CONTACT.FORM.SEND' | translate }}
+            <button class="btn btn-general btn-white"
+                    type="submit"
+                    [disabled]="isSubmitting">
+              <span *ngIf="isSubmitting">Enviando...</span>
+              <span *ngIf="!isSubmitting">{{ 'CONTACT.FORM.SEND' | translate }}</span>
             </button>
           </div>
         </div>
