@@ -6,68 +6,54 @@
         <div class="heading-border-light"></div>
       </div>
 
-      <!-- Formulario que SÍ funciona con Netlify -->
-      <div class="contact-form">
-        <form
-          name="portfolio-contact"
-          method="POST"
-          data-netlify="true"
-          action="/?success=true"
-          netlify>
+      <!-- Usar exactamente la misma estructura que funciona -->
+      <form name="portfolio-contact" method="POST" data-netlify="true" action="/assets/contact.html">
+        <input type="hidden" name="form-name" value="portfolio-contact">
 
-          <input type="hidden" name="form-name" value="portfolio-contact">
-
-          <div class="row con-form">
-            <div class="col-md-12">
-              <input
-                type="text"
-                name="name"
-                placeholder="Nombre completo"
-                class="form-control"
-                required>
-            </div>
-
-            <div class="col-md-12">
-              <input
-                type="email"
-                name="email"
-                placeholder="Correo electrónico"
-                class="form-control"
-                required>
-            </div>
-
-            <div class="col-md-12">
-              <input
-                type="text"
-                name="subject"
-                placeholder="Asunto"
-                class="form-control"
-                required>
-            </div>
-
-            <div class="col-md-12">
-              <textarea
-                name="message"
-                placeholder="Mensaje"
-                class="form-control"
-                rows="5"
-                required></textarea>
-            </div>
-
-            <div class="col-md-12 sub-but">
-              <button class="btn btn-general btn-white" type="submit">
-                Enviar mensaje
-              </button>
-            </div>
+        <div class="row con-form">
+          <div class="col-md-12">
+            <input
+              type="text"
+              name="name"
+              placeholder="Nombre completo"
+              class="form-control"
+              required>
           </div>
-        </form>
 
-        <!-- Mensaje de éxito (se muestra si hay ?success=true en la URL) -->
-        <div *ngIf="showSuccessMessage" class="alert alert-success mt-3">
-          <h4>¡Mensaje enviado correctamente!</h4>
-          <p>Gracias por contactarme. Te responderé lo antes posible.</p>
+          <div class="col-md-12">
+            <input
+              type="email"
+              name="email"
+              placeholder="Correo electrónico"
+              class="form-control"
+              required>
+          </div>
+
+          <div class="col-md-12">
+            <input
+              type="text"
+              name="subject"
+              placeholder="Asunto"
+              class="form-control"
+              required>
+          </div>
+
+          <div class="col-md-12">
+            <textarea
+              name="message"
+              placeholder="Mensaje"
+              class="form-control"
+              rows="5"
+              required></textarea>
+          </div>
+
+          <div class="col-md-12 sub-but">
+            <button class="btn btn-general btn-white" type="submit">
+              {{ 'CONTACT.FORM.SEND' | translate }}
+            </button>
+          </div>
         </div>
-      </div>
+      </form>
     </div>
 
     <!-- Información de contacto -->
