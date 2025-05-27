@@ -59,7 +59,6 @@ export class ContactComponent implements OnInit {
       })
         .subscribe({
           next: (response) => {
-            console.log('Formulario enviado exitosamente');
             this.submitMessage = 'CONTACT.MESSAGES.SUCCESS'; // ← Usa traducción
             this.contactForm.reset();
             this.formSubmitted = false;
@@ -82,7 +81,6 @@ export class ContactComponent implements OnInit {
           }
         });
     } else {
-      console.log('Formulario inválido');
       this.submitMessage = 'CONTACT.MESSAGES.INVALID'; // ← Usa traducción
     }
   }
