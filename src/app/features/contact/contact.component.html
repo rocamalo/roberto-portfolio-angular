@@ -11,66 +11,17 @@
         {{ validationMessage }}
       </div>
 
-      <!-- Formulario HTML nativo para Netlify -->
-      <form name="contact"
-            method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            action="/success.html"
-            (submit)="onSubmit($event)">
+      <!-- Reemplaza todo el formulario por esto temporalmente -->
+<form name="contact-simple" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="contact-simple" />
 
-        <!-- Campo honeypot para detectar bots -->
-        <p style="display: none;">
-          <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-        </p>
+  <input type="text" name="name" placeholder="Tu nombre" required><br><br>
+  <input type="email" name="email" placeholder="Tu email" required><br><br>
+  <input type="text" name="subject" placeholder="Asunto" required><br><br>
+  <textarea name="message" placeholder="Tu mensaje" required></textarea><br><br>
 
-        <div class="row con-form">
-          <div class="col-md-12">
-            <input
-              type="text"
-              name="fullName"
-              #fullName
-              [placeholder]="'CONTACT.FORM.NAME' | translate"
-              class="form-control"
-              required>
-          </div>
-
-          <div class="col-md-12">
-            <input
-              type="email"
-              name="email"
-              #email
-              [placeholder]="'CONTACT.FORM.EMAIL' | translate"
-              class="form-control"
-              required>
-          </div>
-
-          <div class="col-md-12">
-            <input
-              type="text"
-              name="subject"
-              #subject
-              [placeholder]="'CONTACT.FORM.SUBJECT' | translate"
-              class="form-control"
-              required>
-          </div>
-
-          <div class="col-md-12">
-            <textarea
-              name="message"
-              #message
-              [placeholder]="'CONTACT.FORM.MESSAGE' | translate"
-              class="form-control"
-              required></textarea>
-          </div>
-
-          <div class="col-md-12 sub-but">
-            <button class="btn btn-general btn-white" type="submit">
-              {{ 'CONTACT.FORM.SEND' | translate }}
-            </button>
-          </div>
-        </div>
-      </form>
+  <button type="submit">Enviar mensaje</button>
+</form>
     </div>
 
     <!-- Información de contacto -->
