@@ -15,5 +15,14 @@
 </head>
 <body id="page-top">
   <app-root></app-root>
+  <!-- Netlify form fallback -->
+<form name="contact" netlify data-netlify-recaptcha="true" hidden>
+  <input type="text" name="fullName" />
+  <input type="email" name="email" />
+  <input type="text" name="subject" />
+  <textarea name="message"></textarea>
+  <div data-netlify-recaptcha="true"></div>
+</form>
+
 </body>
 </html>
